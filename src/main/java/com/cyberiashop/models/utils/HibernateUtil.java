@@ -1,17 +1,17 @@
-package com.cyberiashop.models.dao;
+package com.cyberiashop.models.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-// Singleton-Pattern for SessionFactory using enum 'HibernateInit'
-public enum HibernateInit {
+// Singleton pattern for SessionFactory using enum 'HibernateUtil'
+public enum HibernateUtil {
     INSTANCE;
 
     private SessionFactory sessionFactory;
 
-    private HibernateInit() {
+    private HibernateUtil() {
         StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure()
                 .build();

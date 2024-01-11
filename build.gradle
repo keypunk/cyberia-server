@@ -18,7 +18,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'com.cyberiashop.views.Main'
+    mainClass = 'com.cyberiashop.Server'
 }
 
 test {

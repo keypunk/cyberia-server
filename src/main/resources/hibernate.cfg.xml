@@ -15,9 +15,9 @@
 
 		<property name="hibernate.hbm2ddl.auto">create</property>
 
-	   <mapping class="com.cyberiashop.models.pojo.Employee"/>
-		<mapping class="com.cyberiashop.models.pojo.Product"/>
+	   <mapping class="com.cyberiashop.models.data_models.Employee"/>
 
     </session-factory>
+
 
 </hibernate-configuration>
