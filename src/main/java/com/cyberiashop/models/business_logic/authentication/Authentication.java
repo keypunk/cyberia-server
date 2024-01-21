@@ -1,6 +1,4 @@
-package com.cyberiashop.models.business_logic;
-
-import com.cyberiashop.models.data_models.User;
+package com.cyberiashop.models.business_logic.authentication;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

@@ -1,14 +1,14 @@
-package com.cyberiashop.models.business_logic;
+package com.cyberiashop.models.business_logic.authentication;
 
-import com.cyberiashop.models.data_access.EmployeeDAO;
-import com.cyberiashop.models.data_access.UserDAO;
-import com.cyberiashop.models.data_models.User;
+import com.cyberiashop.models.data_access.userDAOs.EmployeeDAO;
+import com.cyberiashop.models.data_access.userDAOs.UserDAO;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 public class EmployeeAuthentication extends UnicastRemoteObject implements Authentication {
     private UserDAO userDAO;
+
     public EmployeeAuthentication() throws RemoteException {
         userDAO = new EmployeeDAO();
     }

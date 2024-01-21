@@ -1,5 +1,6 @@
 package com.cyberiashop.models.data_access;
 
+import com.cyberiashop.models.data_access.userDAOs.EmployeeDAO;
 import com.cyberiashop.models.data_models.Employee;
 import com.cyberiashop.models.utils.HibernateUtil;
 import org.junit.jupiter.api.*;

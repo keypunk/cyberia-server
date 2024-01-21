@@ -1,4 +1,4 @@
-package com.cyberiashop.models.data_access;
+package com.cyberiashop.models.data_access.userDAOs;
 
 import com.cyberiashop.models.data_models.User;
 
