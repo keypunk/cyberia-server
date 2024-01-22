@@ -1,6 +1,5 @@
 package com.cyberiashop.models.utils;
 
-import com.cyberiashop.models.data_access.productDAOs.ProductDAO;
 import com.cyberiashop.models.data_models.Category;
 import com.cyberiashop.models.data_models.Product;
 
@@ -70,7 +69,7 @@ public class MockProductDB {
 
         product = new Product();
         product.setName("Sennheiser SC60");
-        product.setPrice(999.99);
+        product.setPrice(99.99);
         product.setCategory(Category.ACCESSORIES);
         product.setQuantity(32);
         product.setImgSrc("/com/cyberiashop/product_images/sennheiser_sc60_headset.jpg");
