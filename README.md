@@ -20,6 +20,7 @@ Cyberia-Shop is an E-Commerce platform to buy and manage electronic products
 ## Installing / Getting started
 
 Before you start cloning the server repository, install the PostgresSQL server.  
+  
 IMPORTANT: Make sure the superuser "postgres" has the assigned password "1234" (You will be prompted to set a password for superuser "postgres")
 Once you finished the database setup, clone the server repository to your IDE's project folder. (Will soon be removed once jar files work again)
 
