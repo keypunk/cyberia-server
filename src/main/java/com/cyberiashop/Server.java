@@ -2,11 +2,10 @@ package com.cyberiashop;
 
 import com.cyberiashop.models.business_logic.authentication.CustomerAuthentication;
 import com.cyberiashop.models.business_logic.authentication.EmployeeAuthentication;
+import com.cyberiashop.models.business_logic.registration.CustomerRegistration;
 import com.cyberiashop.models.business_logic.shop_logic.ElectronicProductSearch;
 import com.cyberiashop.models.data_access.productDAOs.ProductDAO;
-import com.cyberiashop.models.data_access.userDAOs.CustomerDAO;
 import com.cyberiashop.models.data_access.userDAOs.EmployeeDAO;
-import com.cyberiashop.models.data_models.Customer;
 import com.cyberiashop.models.data_models.Employee;
 import com.cyberiashop.models.data_models.Product;
 import com.cyberiashop.models.rmi.RMIRegistrar;
@@ -22,9 +21,6 @@ public class Server {
         EmployeeDAO employeeDAO = new EmployeeDAO();
         employeeDAO.save(new Employee("admin", "1234"));
 
-        CustomerDAO customerDAO = new CustomerDAO();
-        customerDAO.save(new Customer("guest", "1234"));
-
         ProductDAO productDAO = new ProductDAO();
         List<Product> products = MockProductDB.getMockProductList();
         for (Product product : products) {
@@ -35,7 +31,8 @@ public class Server {
         List<UnicastRemoteObject> remoteObjects = List.of(
                 new EmployeeAuthentication(),
                 new CustomerAuthentication(),
-                new ElectronicProductSearch()
+                new ElectronicProductSearch(),
+                new CustomerRegistration()
         );
         RMIRegistrar rmiRegistrar = new RMIRegistrar(rmiServer, remoteObjects);
         rmiRegistrar.bindRemoteObjects();
