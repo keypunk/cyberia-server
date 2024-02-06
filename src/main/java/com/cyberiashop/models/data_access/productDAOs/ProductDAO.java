@@ -2,6 +2,7 @@ package com.cyberiashop.models.data_access.productDAOs;
 
 import com.cyberiashop.models.data_models.Product;
 import com.cyberiashop.models.utils.HibernateUtil;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -51,5 +52,29 @@ public class ProductDAO {
         transaction.commit();
         session.close();
         return products;
+    }
+
+    public void removeProductByName(String productName) {
+        try (Session session = sessionFactory.openSession()) {
+            Transaction transaction = session.beginTransaction();
+
+            try {
+                Query query = session.createQuery("DELETE FROM Product WHERE LOWER(name) = LOWER(:productName)");
+                query.setParameter("productName", productName);
+                int deletedRows = query.executeUpdate();
+
+                if (deletedRows == 0) {
+                    throw new IllegalStateException("Product with name '" + productName + "' not found");
+                }
+            } catch (HibernateException e) {
+                transaction.rollback();
+                throw e; // Rethrow the exception for proper handling
+            }
+
+            transaction.commit();
+        } catch (HibernateException e) {
+            // Handle any other Hibernate exceptions that might occur outside the transaction block
+            throw e;
+        }
     }
 }

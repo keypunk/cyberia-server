@@ -2,6 +2,7 @@ package com.cyberiashop;
 
 import com.cyberiashop.models.business_logic.authentication.CustomerAuthentication;
 import com.cyberiashop.models.business_logic.authentication.EmployeeAuthentication;
+import com.cyberiashop.models.business_logic.management_logic.ElectronicProductManager;
 import com.cyberiashop.models.business_logic.registration.CustomerRegistration;
 import com.cyberiashop.models.business_logic.shop_logic.ElectronicProductSearch;
 import com.cyberiashop.models.data_access.productDAOs.ProductDAO;
@@ -32,7 +33,8 @@ public class Server {
                 new EmployeeAuthentication(),
                 new CustomerAuthentication(),
                 new ElectronicProductSearch(),
-                new CustomerRegistration()
+                new CustomerRegistration(),
+                new ElectronicProductManager()
         );
         RMIRegistrar rmiRegistrar = new RMIRegistrar(rmiServer, remoteObjects);
         rmiRegistrar.bindRemoteObjects();
