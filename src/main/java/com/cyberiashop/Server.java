@@ -4,7 +4,9 @@ import com.cyberiashop.models.business_logic.authentication.CustomerAuthenticati
 import com.cyberiashop.models.business_logic.authentication.EmployeeAuthentication;
 import com.cyberiashop.models.business_logic.shop_logic.ElectronicProductSearch;
 import com.cyberiashop.models.data_access.productDAOs.ProductDAO;
+import com.cyberiashop.models.data_access.userDAOs.CustomerDAO;
 import com.cyberiashop.models.data_access.userDAOs.EmployeeDAO;
+import com.cyberiashop.models.data_models.Customer;
 import com.cyberiashop.models.data_models.Employee;
 import com.cyberiashop.models.data_models.Product;
 import com.cyberiashop.models.rmi.RMIRegistrar;
@@ -18,7 +20,10 @@ import java.util.List;
 public class Server {
     public static void main(String[] args) throws Exception {
         EmployeeDAO employeeDAO = new EmployeeDAO();
-        employeeDAO.save(new Employee("guest", "1234"));
+        employeeDAO.save(new Employee("admin", "1234"));
+
+        CustomerDAO customerDAO = new CustomerDAO();
+        customerDAO.save(new Customer("guest", "1234"));
 
         ProductDAO productDAO = new ProductDAO();
         List<Product> products = MockProductDB.getMockProductList();

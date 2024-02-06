@@ -42,14 +42,14 @@ public class ProductDAO {
         return products;
     }
 
-    public Product getProductByName(String productName) {
+    public List<Product> getProductByName(String productName) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        Query<Product> query = session.createQuery("FROM Product WHERE name LIKE :productName", Product.class);
+        Query<Product> query = session.createQuery("FROM Product WHERE LOWER(name) LIKE LOWER(:productName)", Product.class);
         query.setParameter("productName", "%" + productName + "%");
-        Product product = query.uniqueResult();
+        List<Product> products = query.list();
         transaction.commit();
         session.close();
-        return product;
+        return products;
     }
 }

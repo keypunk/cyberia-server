@@ -18,7 +18,7 @@ public class ElectronicProductSearch extends UnicastRemoteObject implements Prod
         return productDAO.getAllProducts();
     }
 
-    public Product searchByProductName(String productName) {
+    public List<Product> searchByProductName(String productName) {
         return productDAO.getProductByName(productName);
     }
 
