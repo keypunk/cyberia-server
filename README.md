@@ -8,9 +8,10 @@ Cyberia-Shop is an E-Commerce platform to buy and manage electronic products
 
 ## Features still missing
 - Order table and order logic still missing
+- Employee management functions still missing
 
 ## System prerequisites
-- System with at least 4GB RAM (for modern operation system requirements)
+- System with at least 4GB RAM (for modern operating system requirements)
 
 ## Software prerequisites
 - At least Java SDK 19 or higher
