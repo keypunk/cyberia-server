@@ -1,3 +1,6 @@
+# Final commit hash
+74b7117d65a6c28cf467441f358d802ddbd7ea0a (master-branch)
+
 # Cyberia-Shop (Server)
 Cyberia-Shop is an E-Commerce platform to buy and manage electronic products
 
