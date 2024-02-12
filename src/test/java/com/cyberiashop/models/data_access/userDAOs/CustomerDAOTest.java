@@ -30,7 +30,7 @@ public class CustomerDAOTest {
     }
 
     @Test
-    void save_InvalidCustomer_throwIllegalArgumentException() {
+    void save_InvalidCustomer_ThrowIllegalArgumentException() {
         // Arrange
         Customer customer = null;
 
@@ -77,6 +77,5 @@ public class CustomerDAOTest {
     static void tearDown() {
         customer = null;
         customerDAO.deleteByUsername("guest");
-        HibernateUtil.INSTANCE.getSessionFactory().close();
     }
 }

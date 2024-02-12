@@ -28,7 +28,7 @@ class EmployeeDAOTest {
     }
 
     @Test
-    void save_InvalidEmployee_throwIllegalArgumentException() {
+    void save_InvalidEmployee_ThrowIllegalArgumentException() {
         // Arrange
         Employee employee = null;
 
@@ -87,6 +87,5 @@ class EmployeeDAOTest {
     static void tearDown() {
         employee = null;
         employeeDAO.deleteByUsername("guest");
-        HibernateUtil.INSTANCE.getSessionFactory().close();
     }
 }
