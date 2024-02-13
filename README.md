@@ -19,14 +19,14 @@ Cyberia-Shop is an E-Commerce platform to buy and manage electronic products
 ## Software prerequisites
 - At least Java SDK 19 or higher
 - [A PostgresSQL Server](https://www.postgresql.org/download/)
-- Gradle build system (will soon be removed, once jar files work again)
+- [Gradle build system](https://gradle.org/)
 
 ## Installing / Getting started
 
 Before you start cloning the server repository, install the PostgresSQL server.  
   
-IMPORTANT: Make sure the superuser "postgres" has the assigned password "1234" (You will be prompted to set a password for superuser "postgres")
-Once you finished the database setup, clone the server repository to your IDE's project folder or, alternatively, download the JAR-file from the 'Releases' section.  
+IMPORTANT: Make sure the superuser "postgres" has the assigned password "1234" (You will be prompted to set a password for superuser "postgres").  
+Once you finished the database setup, clone the server repository to your desired location or, alternatively, download the JAR-file from the 'Releases' section and follow the instructions there.    
 
 ```shell
 git clone git@github.com:keypunk/cyberia-server.git
