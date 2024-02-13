@@ -26,11 +26,18 @@ Cyberia-Shop is an E-Commerce platform to buy and manage electronic products
 Before you start cloning the server repository, install the PostgresSQL server.  
   
 IMPORTANT: Make sure the superuser "postgres" has the assigned password "1234" (You will be prompted to set a password for superuser "postgres")
-Once you finished the database setup, clone the server repository to your IDE's project folder. (Will soon be removed once jar files work again)
+Once you finished the database setup, clone the server repository to your IDE's project folder or, alternatively, download the JAR-file from the 'Releases' section.  
 
 ```shell
 git clone git@github.com:keypunk/cyberia-server.git
-```
+```  
+Afterwards build the project
+```shell
+./gradlew build
+```  
 Let the Gradle build system download all the necessary libraries.    
 Once the building and indexing is complete, you can run the server.  
+```shell
+./gradlew run
+```  
 # Now you can follow the [client instructions](https://github.com/keypunk/cyberia-client)
